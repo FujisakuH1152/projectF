@@ -6,7 +6,10 @@ body {
 
 
 .english{
-  font-family: 'Great Vibes', cursive;
+	font-family: 'Frijole', cursive;
+	/*
+  	font-family: 'Great Vibes', cursive;
+  	*/
 }
 
 .form-signin {
