@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * <p> ログアウト認証処理を実行するクラス </p>
+ * <p> .ログアウト認証処理を実行するクラス </p>
  * 
  * @author toda.shinnosuke
  *

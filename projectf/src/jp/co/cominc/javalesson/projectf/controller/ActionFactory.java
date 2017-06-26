@@ -7,7 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebListener;
 
 /**
- * <p>Actionクラスの実装とそのインスタンスを生成して返す</p>
+ * <p>.Actionクラスの実装とそのインスタンスを生成して返す</p>
  * 
  * @author toda.shinnosuke
  *

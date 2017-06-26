@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * <p> ActionFactoryクラスの実装のためのインターフェース </p>
+ * <p> .ActionFactoryクラスの実装のためのインターフェース </p>
  * 
  * @author toda.shinnosuke
  *

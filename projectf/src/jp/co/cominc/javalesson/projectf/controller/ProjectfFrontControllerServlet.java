@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ProjectfFrontControllerServlet
+ * .Servlet implementation class ProjectfFrontControllerServlet
  */
 @WebServlet("*.do")
 public class ProjectfFrontControllerServlet extends HttpServlet {

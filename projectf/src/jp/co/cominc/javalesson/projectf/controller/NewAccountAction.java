@@ -10,7 +10,7 @@ import jp.co.comnic.javalesson.webapp.ems.controller.ControllerUtils;
 import jp.co.comnic.javalesson.webapp.ems.dao.BaseDao;
 
 /**
- * <p> 新規アカウント追加処理を実行するActionインターフェイスの実装 </p>
+ * <p> .新規アカウント追加処理を実行するActionインターフェイスの実装 </p>
  * 
  * @author toda.shinnosuke
  *

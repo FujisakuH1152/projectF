@@ -1,5 +1,9 @@
 package jp.co.cominc.javalesson.projectf.controller;
 
+/**
+ * @author toda.shinnosuke
+ *
+ */
 public class ControllerUtils {
 	
 	public static String getFullyQualifiedClassName(String servletPath) {
