@@ -8,7 +8,6 @@ import jp.co.cominc.javalesson.projectf.entity.Account;
 
 /**
  * <p>アカウント･テーブルのCRUD操作を実装するDAOクラス</p>
- * 
  * @author fujisaku.hayato
  * @author ver1.0α
  */

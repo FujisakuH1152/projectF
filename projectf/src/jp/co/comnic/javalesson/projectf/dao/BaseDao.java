@@ -10,6 +10,12 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 
+/**
+ * 
+ * 共通の基底となるDaoクラス
+ * @author fujisaku.hayato
+ * @author ver1.0α
+ */
 public class BaseDao {
 	// EntityManagerの生成 (エンティティ全体の管理用オブジェクト)
 	protected EntityManager em = Persistence.createEntityManagerFactory("projectf2").createEntityManager();
