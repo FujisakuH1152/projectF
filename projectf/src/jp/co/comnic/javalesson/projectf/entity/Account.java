@@ -1,4 +1,4 @@
-package jp.co.cominc.javalesson.projectf.entity;
+package jp.co.comnic.javalesson.projectf.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

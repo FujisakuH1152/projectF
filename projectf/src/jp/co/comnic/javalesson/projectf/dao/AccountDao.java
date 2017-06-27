@@ -4,7 +4,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import jp.co.cominc.javalesson.projectf.entity.Account;
+import jp.co.comnic.javalesson.projectf.entity.Account;
 
 /**
  * <p>アカウント･テーブルのCRUD操作を実装するDAOクラス</p>
