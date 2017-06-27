@@ -14,6 +14,7 @@ import jp.co.comnic.javalesson.projectf.dao.DaoException;
 
 
 /**
+ *
  * 
  * 共通の基底となるDaoクラス
  * @author fujisaku.hayato
