@@ -43,7 +43,7 @@
 		</p>
 		
 	<form action="F">
-      <input name="serch">
+      <input name="search">
       <input type="submit" value="カテゴリ検索">
 
    	</form>

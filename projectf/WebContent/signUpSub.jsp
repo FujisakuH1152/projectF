@@ -26,7 +26,7 @@
     <eng class="english">
     
     <!-- 
-    action = SignUp.do
+    action = signUp.do
     email = email
     password = password
     text = userName
@@ -38,7 +38,7 @@
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <label for="inputText" class="sr-only">UserName</label>
-        <input type="text" name="userName" id="inputText" class="form-control" placeholder="UserName" required>
+        <input type="text" name="username" id="inputText" class="form-control" placeholder="UserName" required>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
       </form>

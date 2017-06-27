@@ -40,12 +40,9 @@ public class ActionFactory implements ServletContextListener {
 
 		Action action = null;
 
-		System.out.println(servletPath);
-
 		// 引数として渡されたservletPathに対応するActionクラスの実装名を取得
 		String actionClassName = context.getInitParameter(servletPath);
 
-		System.out.println(actionClassName);
 		try {
 			// 取得したActionクラスの実装名からインスタンスを取得
 			action = (Action) Class.forName(actionClassName).newInstance();

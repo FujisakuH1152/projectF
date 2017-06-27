@@ -9,9 +9,15 @@
 		<param-name>/login.do</param-name>
 		<param-value>jp.co.comnic.javalesson.projectf.controller.LoginAction</param-value>
 	</context-param>
+	
 	<context-param>
 		<param-name>/logout.do</param-name>
 		<param-value>jp.co.comnic.javalesson.projectf.controller.LogoutAction</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>/signUp.do</param-name>
+		<param-value>jp.co.comnic.javalesson.projectf.controller.NewAccountAction</param-value>
 	</context-param>
 
 	<servlet>

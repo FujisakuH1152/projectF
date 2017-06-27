@@ -33,10 +33,17 @@ public class ControllerUtils {
 	
 	public static String getFullyQualifiedClassName(String servletPath) {
 		
-		String className = servletPath.substring(1, servletPath.lastIndexOf('/') - 1);
+		System.out.println(servletPath);		
+		
+		String className = servletPath.substring(1, servletPath.lastIndexOf('/'));
+		
+		System.out.println(className);
+		
 		String packageName = "jp.co.comnic.javalesson.projectf.entity.";
 		String firstCharacter = String.valueOf(className.charAt(0));
 		firstCharacter = firstCharacter.toUpperCase();
+		
+		System.out.println(packageName + className.replaceFirst(".", firstCharacter));
 	
 		return packageName + className.replaceFirst(".", firstCharacter);
 	}
