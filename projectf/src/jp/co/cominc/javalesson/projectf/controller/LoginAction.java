@@ -1,11 +1,14 @@
 package jp.co.cominc.javalesson.projectf.controller;
 
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import jp.co.comnic.javalesson.aaaaaprojectf.dao.AccountDao;
+import jp.co.comnic.javalesson.aaaaaprojectf.dao.DaoException;
 import jp.co.comnic.javalesson.aaaaaprojectf.entity.Account;
 
 /**
@@ -28,27 +31,29 @@ public class LoginAction implements Action {
 		//各parameterを取得, forwordPathは後々設定		
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		String forwardPath = request.getRequestURI();
+		String forwardPath = "login";
 		
 		try {
 			// クライアント送られてきたメールアドレスとパスワードによる認証処理を????Daoに委譲し、
 			//実行結果をAccoutoオブジェクトとして取得
-			Account account = ??????Dao().?????????(email, password);
+			Account account = new AccountDao().loginAuthenticate(email, password);
 			
 			if(account != null) {
 				// セッション管理を開始し、セッションのスコープ・オブジェクトとなるHttpSessionに
 				// 認証済みを表すboolean値とログイン・ユーザー名をセット
-				request.getSession().setAttribute(, );
-				request.getSession().setAttribute(, account.getUsername()));
+				request.getSession().setAttribute("isAuthenticated", "AUTHENTICATED");
+				request.getSession().setAttribute("username", account.getUsername());
 				
-				//ログイン後、ログイン画面遷移前のページへ遷移
-				response.sendRedirect(request.getRequestURI());
+				System.out.println(request.getServletPath());
 				
 				forwardPath = null;
+				//ログイン後、ログイン画面遷移前のページへ遷移
+//				response.sendRedirect(request.getRequestURI());
+				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/" + request.getServletPath()); //---> /aaaaaprojectf/
 				
 			} else { //ログイン認証失敗処理 
 				//ログイン失敗時のエラーメッセージ
-				request.setAttribute("error", "Emailまたはパスワードに誤りがあります。");
+				request.setAttribute("error", "Emailまたはパスワードに誤りがあります。"); 
 			}
 		} catch (DaoException e) {
 			throw new ServletException(e);
