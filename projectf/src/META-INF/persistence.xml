@@ -7,16 +7,6 @@
 		<class>jp.co.comnic.javalesson.projectf.entity.Category</class>
 		<class>jp.co.comnic.javalesson.projectf.entity.Mainmessage</class>
 		<class>jp.co.comnic.javalesson.projectf.entity.Submessage</class>
-		      <properties>
-            <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://13.59.160.76/projectf" />
-            <property name="javax.persistence.jdbc.driver"
-                      value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.user"
-                      value="maria" />
-            <property name="javax.persistence.jdbc.password"
-                      value="mariadb" />
-            <property name="eclipselink.logging.level.sql" value="FINE"/>
-        </properties>
+		    
 	</persistence-unit>
 </persistence>
