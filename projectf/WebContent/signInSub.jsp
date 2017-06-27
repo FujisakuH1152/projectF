@@ -58,7 +58,7 @@
     password = password
      -->
     
-      <form class="form-signin" action="Login.do" method="post">
+      <form class="form-signin" action="login.do" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>

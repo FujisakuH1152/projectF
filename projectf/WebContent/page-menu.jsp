@@ -37,15 +37,17 @@
         </li>
       </ul>    
       <ul class="nav navbar-nav navbar-right">
-		<form>
+      
+      	<p class="login-user">Login user: ${loginUsername} 
+		<a href="${pageContext.servletContext.servletContextName}/logout.do"> － Logout</a>
+		</p>
+		
+	<form action="F">
       <input name="serch">
       <input type="submit" value="カテゴリ検索">
 
-   		 </form>
+   	</form>
    		</ul>
     </div>
   </div>
-  
-    
- 
 </nav>

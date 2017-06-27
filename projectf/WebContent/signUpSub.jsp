@@ -49,7 +49,7 @@
     password = password
     text = userName
      -->
-      <form class="form-signup" action="SignUp.do" method="post">
+      <form class="form-signup" action="signUp.do" method="post">
         <h2 class="form-signup-heading">Please write your account data</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
