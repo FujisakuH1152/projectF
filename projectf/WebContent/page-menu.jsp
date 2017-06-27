@@ -35,15 +35,17 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-      </ul>
-    </div>
-  </div>
-  <ul class="nav navbar-nav navbar-right">
-
-    <form>
+      </ul>    
+      <ul class="nav navbar-nav navbar-right">
+		<form>
       <input name="serch">
       <input type="submit" value="カテゴリ検索">
 
-    </form> 
-  </ul>
+   		 </form>
+   		</ul>
+    </div>
+  </div>
+  
+    
+ 
 </nav>
