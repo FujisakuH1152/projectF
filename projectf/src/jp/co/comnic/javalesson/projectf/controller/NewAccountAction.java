@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import jp.co.comnic.javalesson.projectf.controller.ControllerUtils;
 import jp.co.comnic.javalesson.projectf.dao.BaseDao;
+import jp.co.comnic.javalesson.projectf.dao.DaoException;
 ;
 
 /**
@@ -24,18 +25,23 @@ public class NewAccountAction implements Action {
 		// TODO Auto-generated method stub
 		
 		String servletPath = request.getServletPath();
+
+		String forwardPath = "/projectf/top.jsp"; // 例外発生時のフォワード先（元の登録画面）
 		
 		try {
 				Object entity = Class.forName(ControllerUtils.getFullyQualifiedClassName(servletPath)).newInstance();
-			
-				
+				ControllerUtils.createEntity(request, entity);
 				new BaseDao().insert(entity);
-		} catch {
-			
+				
+				forwardPath = null;
+				response.sendRedirect("/login");
+				
+		} catch (DaoException e) {
+			request.setAttribute("error", "ERROR : " + ControllerUtils.getShortMessage(e));
+		} catch (Exception e) {
+			throw new ServletException(e);
 		}
 		
-		return null;
+		return forwardPath;
 	}
-	
-
 }
