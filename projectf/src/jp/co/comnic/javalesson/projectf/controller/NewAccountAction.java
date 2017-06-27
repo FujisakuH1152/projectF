@@ -1,4 +1,4 @@
-package jp.co.cominc.javalesson.projectf.controller;
+package jp.co.comnic.javalesson.projectf.controller;
 
 import java.io.IOException;
 
@@ -6,8 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.comnic.javalesson.webapp.ems.controller.ControllerUtils;
-import jp.co.comnic.javalesson.webapp.ems.dao.BaseDao;
+import jp.co.comnic.javalesson.projectf.controller.ControllerUtils;
+import jp.co.comnic.javalesson.projectf.dao.BaseDao;
+;
 
 /**
  * <p> .新規アカウント追加処理を実行するActionインターフェイスの実装 </p>

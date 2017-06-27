@@ -1,4 +1,4 @@
-package jp.co.cominc.javalesson.projectf.controller;
+package jp.co.comnic.javalesson.projectf.controller;
 
 import java.io.IOException;
 
