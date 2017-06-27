@@ -5,13 +5,11 @@
 
 
 			<jsp:include page="page-header.jsp">
-		<jsp:param name="title" value="Menu" />
+		<jsp:param name="title" value="ProjectF Top Page" />
 			</jsp:include>
-			
 			
 		 <!-- Custom styles for this template -->
  		 <link href="./css/navbar-fixed-top.css" rel="stylesheet">
-
 
 </head>
 
