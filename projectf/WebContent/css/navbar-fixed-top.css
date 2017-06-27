@@ -1,0 +1,21 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+form{
+margin-top: 10px;
+}
+
+indexbox {
+	font-size: 15px;
+}
+
+indexbox>boxtitle{
+	font-size: 25px;
+}
+
+indexbox>boxauther{
+	font-size: 10px;
+}
+
