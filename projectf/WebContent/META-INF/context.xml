@@ -1,0 +1,9 @@
+<Context>
+	<Resource name="ds/projectf"
+	          type="javax.sql.DataSource"
+	          driverClassName="com.mysql.jdbc.Driver"
+	          url="jdbc:mysql://13.59.160.76/projectf"
+	          username="maria"
+	          password="mariadb"
+	/>
+</Context>

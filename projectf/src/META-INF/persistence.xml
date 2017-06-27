@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="projectf" transaction-type="RESOURCE_LOCAL">
+		<class>jp.co.cominc.javalesson.projectf.entity.Account</class>
+		<class>jp.co.cominc.javalesson.projectf.entity.Category</class>
+		<class>jp.co.cominc.javalesson.projectf.entity.Mainmessage</class>
+		<class>jp.co.cominc.javalesson.projectf.entity.Submessage</class>
+		      <properties>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:mysql://13.59.160.76/projectf" />
+            <property name="javax.persistence.jdbc.driver"
+                      value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.user"
+                      value="maria" />
+            <property name="javax.persistence.jdbc.password"
+                      value="mariadb" />
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+        </properties>
+	</persistence-unit>
+</persistence>
