@@ -5,10 +5,11 @@
   
   
   	<jsp:include page="page-header.jsp">
-		<jsp:param name="title" value="Menu" />
-			</jsp:include>
-
-   <title>SignIn</title>
+		<jsp:param name="title" value="SignIn" />
+	</jsp:include>
+	
+	    <link rel="icon" href="./favicon.ico">
+		<link href="./css/signin.css" rel="stylesheet">
 
   </head>
 
