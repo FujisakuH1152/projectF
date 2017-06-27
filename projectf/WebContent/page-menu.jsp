@@ -18,9 +18,9 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Top</a></li>
-        <li><a href="#about">Sign Up</a></li>
-        <li><a href="#contact">Sign In</a></li>
+        <li class="active"><a href="/projectf/top.jsp">Top</a></li>
+        <li><a href="./signUpSub.jsp">Sign Up</a></li>
+        <li><a href="./signInSub.jsp">Sign In</a></li>
 
         <li class="dropdown">
           <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
