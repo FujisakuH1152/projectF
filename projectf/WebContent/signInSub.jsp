@@ -8,7 +8,7 @@
 		<jsp:param name="title" value="SignIn" />
 	</jsp:include>
 	
-	    <link rel="icon" href="./favicon.ico">
+	    
 		<link href="./css/signin.css" rel="stylesheet">
 
   </head>
