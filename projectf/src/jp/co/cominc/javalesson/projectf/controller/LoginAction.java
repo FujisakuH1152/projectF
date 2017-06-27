@@ -7,9 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.comnic.javalesson.aaaaaprojectf.dao.AccountDao;
-import jp.co.comnic.javalesson.aaaaaprojectf.dao.DaoException;
-import jp.co.comnic.javalesson.aaaaaprojectf.entity.Account;
+import jp.co.comnic.javalesson.projectf.dao.AccountDao;
+import jp.co.comnic.javalesson.projectf.dao.DaoException;
+import jp.co.comnic.javalesson.projectf.entity.Account;
 
 /**
  * <p>
@@ -49,7 +49,8 @@ public class LoginAction implements Action {
 				forwardPath = null;
 				//ログイン後、ログイン画面遷移前のページへ遷移
 //				response.sendRedirect(request.getRequestURI());
-				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/" + request.getServletPath()); //---> /aaaaaprojectf/
+//				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/" + request.getServletPath()); //---> /aaaaaprojectf/
+				response.sendRedirect("/projectf/top");
 				
 			} else { //ログイン認証失敗処理 
 				//ログイン失敗時のエラーメッセージ
