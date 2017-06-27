@@ -50,7 +50,7 @@ public class LoginAction implements Action {
 				//ログイン後、ログイン画面遷移前のページへ遷移
 //				response.sendRedirect(request.getRequestURI());
 //				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/" + request.getServletPath()); //---> /aaaaaprojectf/
-				response.sendRedirect("/projectf/top");
+				response.sendRedirect("/projectf/top.jsp");
 				
 			} else { //ログイン認証失敗処理 
 				//ログイン失敗時のエラーメッセージ

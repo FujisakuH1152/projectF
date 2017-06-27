@@ -32,7 +32,7 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 		 -->
-        <welcome-file>Top.jsp</welcome-file>
+        <welcome-file>top.jsp</welcome-file>
 	
 	</welcome-file-list>
 </web-app>
