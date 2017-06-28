@@ -6,6 +6,7 @@ import javax.persistence.criteria.Root;
 import jp.co.comnic.javalesson.projectf.entity.Category;
 
 
+
 public class CategoryDao extends BaseDao {
 
 	public CategoryDao() throws DaoException {}
@@ -15,5 +16,9 @@ public class CategoryDao extends BaseDao {
 
 	public java.util.List<Category> findAll() {
 		return super.findAll(query, root);
+	}
+	
+	public Category findById(Integer id) {
+		return super.findById(Category.class, id);
 	}
 }

@@ -55,7 +55,7 @@ public class AuthenticateFilter implements Filter {
 			
 		} else {
 			// それ以外のリクエストはすべてログイン画面へリダイレクト
-			((HttpServletResponse)response).sendRedirect(servletContext.getContextPath() + "/login");
+			((HttpServletResponse)response).sendRedirect(servletContext.getContextPath() + "/signInSub.jsp");
 		}
 	}
 
