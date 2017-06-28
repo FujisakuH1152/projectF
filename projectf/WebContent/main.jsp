@@ -84,11 +84,11 @@
     			<div class="panel-heading">以下に入力してください。</div>
     			<div class="panel-body">
     			
-              <form action="mainmessage.do" method="post">
+              <form action="submessage.do" method="post">
                 
                 <div class="form-group">
-                <label for="exampleInputEmail1">スレッド番号</label>
-                <input type="number" name="serialid" class="form-control">
+                <label for="exampleInputEmail1">スレッドNo.${param.id}</label>
+                <input type="hidden" name="mainserialid" value="${param.id}" class="form-control">
                 </div>
                 
                 <div class="form-group">
@@ -99,21 +99,6 @@
                 <div class="form-group">
                 <label for="exampleInputEmail1">日付</label>
                 <input type="date" name="pdate" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                  <label for="exampleInputEmail1">タイトル</label>
-                  <input type="text" name="subject" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input type="email" name="account" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                  <label for="exampleInputEmail1">カテゴリ</label>
-                  <input type="number" name="category" class="form-control">
                 </div>
                 
                 <button type="submit" class="btn btn-default">投稿</button>

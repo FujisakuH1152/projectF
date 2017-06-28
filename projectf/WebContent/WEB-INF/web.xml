@@ -24,6 +24,12 @@
 		<param-name>/mainmessage.do</param-name>
 		<param-value>jp.co.comnic.javalesson.projectf.controller.NewMainMessageAction</param-value>
 	</context-param>
+	
+	<context-param>
+		<param-name>/submessage.do</param-name>
+		<param-value>jp.co.comnic.javalesson.projectf.controller.NewSubMessageAction</param-value>
+	</context-param>
+	
 
 	<servlet>
 		<servlet-name>Login</servlet-name>

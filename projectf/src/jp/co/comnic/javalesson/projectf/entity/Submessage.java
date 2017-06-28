@@ -30,6 +30,13 @@ public class Submessage implements Serializable {
 
 	public Submessage() {
 	}
+	
+	public Submessage(int serialid, String message, Date pdate, Mainmessage mainmessage) {
+		this.serialid = serialid;
+		this.message = message;
+		this.pdate = pdate;
+		this.mainmessage = mainmessage;
+	}
 
 	public int getSerialid() {
 		return this.serialid;

@@ -23,7 +23,7 @@ public class NewSubMessageAction implements Action {
 		// TODO Auto-generated method stub
 		String str = "/Submessage/";
 
-		String forwardPath = "signInSub.jsp"; // 例外発生時のフォワード先（元の登録画面）
+		String forwardPath = "main.jsp"; // 例外発生時のフォワード先（元の登録画面）
 
 		try {
 			
@@ -33,9 +33,11 @@ public class NewSubMessageAction implements Action {
 			// リクエスト・パラメータの値を使用してエンティティ・オブジェクトのフィールド値を設定
 			ControllerUtils.createEntity(request, entity);
 			new BaseDao().insert(entity);
+			
+			request.setAttribute("id", request.getParameter("mainserialid"));
 
 			forwardPath = null;
-			response.sendRedirect(request.getRequestURI());
+			response.sendRedirect("main.jsp");
 
 		} catch (DaoException e) {
 			request.setAttribute("error", "ERROR : " + ControllerUtils.getShortMessage(e));

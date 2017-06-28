@@ -156,7 +156,7 @@ public class ControllerUtils {
 		String errorMessage = e.getCause().getMessage().split(":")[3];
 		
 		if (errorMessage.endsWith("Error Code")) {
-			errorMessage = errorMessage.replaceAll("Error Code", "");
+			errorMessage = errorMessage.replaceAll("Error Code", "入力されていない項目があります。");
 		}
 		
 		return errorMessage;
