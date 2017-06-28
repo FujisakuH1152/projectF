@@ -5,6 +5,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
 import jp.co.comnic.javalesson.projectf.entity.Account;
+import jp.co.comnic.javalesson.projectf.entity.Category;
 
 /**
  * <p>アカウント･テーブルのCRUD操作を実装するDAOクラス</p>
@@ -20,6 +21,10 @@ public class AccountDao extends BaseDao {
 	
 	public java.util.List<Account> findAll(){
 		return super.findAll(query, root);	
+	}
+	
+	public Account findById(Integer id) {
+		return super.findById(Account.class, id);
 	}
 	
 	public Account loginAuthenticate(String email, String password){
