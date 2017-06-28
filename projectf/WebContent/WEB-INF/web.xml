@@ -21,7 +21,7 @@
 	</context-param>
 	
 	<context-param>
-		<param-name>/mainmessage.do</param-name>
+		<param-name>/createmessage.do</param-name>
 		<param-value>jp.co.comnic.javalesson.projectf.controller.NewMainMessageAction</param-value>
 	</context-param>
 	

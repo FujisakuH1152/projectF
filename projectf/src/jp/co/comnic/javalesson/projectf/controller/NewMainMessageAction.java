@@ -24,7 +24,7 @@ public class NewMainMessageAction implements Action {
 		String str = "/Mainmessage/";
 
 		String forwardPath = "top.jsp"; // 例外発生時のフォワード先（元の登録画面）
-
+		
 		try {
 			
 			// リクエスト・パス文字列から空のエンティティ・オブジェクトを生成(MainmessageEntity)
@@ -34,8 +34,10 @@ public class NewMainMessageAction implements Action {
 			ControllerUtils.createEntity(request, entity);
 			new BaseDao().insert(entity);
 
+			
 			forwardPath = null;
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("top.jsp");
+		
 
 		} catch (DaoException e) {
 			request.setAttribute("error", "ERROR : " + ControllerUtils.getShortMessage(e));

@@ -44,11 +44,14 @@
   			</div>
   		</div>
   		
+  				
+		<c:if test="${!empty param.id}">
+	
   		<sql:query var="sublist" dataSource="ds/projectf">
   			SELECT * FROM SUBMESSAGE WHERE mainserialid = ${param.id};
   		</sql:query>
   		
-
+		</c:if>
   		
   		
   		
@@ -87,8 +90,12 @@
               <form action="submessage.do" method="post">
                 
                 <div class="form-group">
+                <input type="hidden" name="serialid" value=NULL class="form-control">
+                </div>
+                
+                <div class="form-group">
                 <label for="exampleInputEmail1">スレッドNo.${param.id}</label>
-                <input type="hidden" name="mainserialid" value="${param.id}" class="form-control">
+                <input type="hidden" name="mainserialid" value=${param.id} class="form-control">
                 </div>
                 
                 <div class="form-group">

@@ -16,8 +16,10 @@ import org.apache.commons.beanutils.converters.DateConverter;
 import jp.co.comnic.javalesson.projectf.dao.AccountDao;
 import jp.co.comnic.javalesson.projectf.dao.CategoryDao;
 import jp.co.comnic.javalesson.projectf.dao.DaoException;
+import jp.co.comnic.javalesson.projectf.dao.MainmessageDao;
 import jp.co.comnic.javalesson.projectf.entity.Account;
 import jp.co.comnic.javalesson.projectf.entity.Category;
+import jp.co.comnic.javalesson.projectf.entity.Mainmessage;
 import jp.co.comnic.javalesson.projectf.entity.Submessage;
 
 /**
@@ -73,6 +75,7 @@ public class ControllerUtils {
 			ConvertUtils.register(new CategoryConverter(), Category.class);
 			ConvertUtils.register(new AccountConverter(), Account.class);
 			ConvertUtils.register(new SubMessageConverter(), Submessage.class);
+			ConvertUtils.register(new MainmessageConverter(), Mainmessage.class);
 			
 			// Apache Commons ProjectのBeanUtilsを使用して
 			// Mapオブジェクトからエンティティ・オブジェクトへ値をセット

@@ -79,7 +79,7 @@
     			<div class="panel-heading">以下に入力してください。</div>
     			<div class="panel-body">
     			
-              <form action="mainmessage.do" method="post">
+              <form action="createmessage.do" method="post">
 				
 				<div class="form-group">
                 <input type="hidden" name="serialid" value=NULL class="form-control">
