@@ -1,6 +1,5 @@
 package jp.co.comnic.javalesson.projectf.controller;
 
-
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -27,8 +26,7 @@ public class LoginAction implements Action {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		//各parameterを取得, forwordPathは後々設定		
+				
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String forwardPath = "login";
@@ -43,8 +41,6 @@ public class LoginAction implements Action {
 				// 認証済みを表すboolean値とログイン・ユーザー名をセット
 				request.getSession().setAttribute("isAuthenticated", "AUTHENTICATED");
 				request.getSession().setAttribute("loginUsername", account.getUsername());
-				
-				System.out.println(request.getServletPath());
 				
 				forwardPath = null;
 				//ログイン後、ログイン画面遷移前のページへ遷移
