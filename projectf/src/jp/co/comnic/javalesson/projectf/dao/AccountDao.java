@@ -23,8 +23,8 @@ public class AccountDao extends BaseDao {
 		return super.findAll(query, root);	
 	}
 	
-	public Account findById(Integer id) {
-		return super.findById(Account.class, id);
+	public Account findById(String email) {
+		return super.findById(Account.class, email);
 	}
 	
 	public Account loginAuthenticate(String email, String password){

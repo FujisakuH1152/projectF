@@ -18,7 +18,7 @@ public class ProjectfFrontControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		request.setCharacterEncoding("utf-8");
 		// リクエストURLから適切なActionオブジェクト(ビジネス・ロジックの実行をカプセル化するオブジェクト)を取得
 		Action action = ActionFactory.getAction(request.getServletPath());
 		// Actionを実行して、転送先Viewのパスを取得

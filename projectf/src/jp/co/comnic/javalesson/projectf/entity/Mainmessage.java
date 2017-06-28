@@ -12,10 +12,12 @@ import java.util.List;
  */
 @Entity
 @NamedQuery(name="Mainmessage.findAll", query="SELECT m FROM Mainmessage m")
+
 public class Mainmessage implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+
 	private int serialid;
 
 	private String message;
@@ -40,6 +42,16 @@ public class Mainmessage implements Serializable {
 	private List<Submessage> submessages;
 
 	public Mainmessage() {
+	}
+	
+	public Mainmessage(int serialid, String message, Date pdate, String subject, Category category, Account account) {
+		this.serialid = serialid;
+		this.message = message;
+		this.pdate = pdate;
+		this.subject = subject;
+		this.category = category;
+		this.account = account;
+				
 	}
 
 	public int getSerialid() {

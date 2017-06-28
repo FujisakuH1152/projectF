@@ -23,7 +23,7 @@ public class NewMainMessageAction implements Action {
 		// TODO Auto-generated method stub
 		String str = "/Mainmessage/";
 
-		String forwardPath = "top.jsp"; // 例外発生時のフォワード先（元の登録画面）
+		String forwardPath = "signInSub.jsp"; // 例外発生時のフォワード先（元の登録画面）
 
 		try {
 			

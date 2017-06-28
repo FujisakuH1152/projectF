@@ -8,18 +8,16 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.beanutils.BeanUtils;
-//import org.apache.commons.beanutils.ConvertUtils;
-//import org.apache.commons.beanutils.Converter;
-//import org.apache.commons.beanutils.converters.DateConverter;
 import org.apache.commons.beanutils.ConvertUtils;
-//import org.apache.commons.beanutils.Converter;
+import org.apache.commons.beanutils.Converter;//import org.apache.commons.beanutils.converters.DateConverter;
+
 import org.apache.commons.beanutils.converters.DateConverter;
 
-//import jp.co.comnic.javalesson.projectf.controller.ControllerUtils.MainmessageConverter;
-//import jp.co.comnic.javalesson.projectf.entity.Mainmessage;
-
-
-//import jp.co.comnic.javalesson.projectf.entity.Account;
+import jp.co.comnic.javalesson.projectf.dao.AccountDao;
+import jp.co.comnic.javalesson.projectf.dao.CategoryDao;
+import jp.co.comnic.javalesson.projectf.dao.DaoException;
+import jp.co.comnic.javalesson.projectf.entity.Account;
+import jp.co.comnic.javalesson.projectf.entity.Category;
 
 /**
  * <p> Entityの作成を行うクラス </p>
@@ -63,16 +61,18 @@ public class ControllerUtils {
 		Map<String, String> propertyMap = new HashMap<>();
 		for(String key : parameterMap.keySet()) {
 			propertyMap.put(key, parameterMap.get(key)[0]);
+			System.out.println(propertyMap.put(key, parameterMap.get(key)[0]));
 		}
 
 		try {
 			// 日付形式への対応
 			DateConverter dateConverter = new DateConverter();
-			dateConverter.setPattern("yyyy-MM-dd HH:mm:ss");
+			dateConverter.setPattern("yyyy-MM-dd");
 						
 			// コンバーターの登録
 			ConvertUtils.register(dateConverter, java.util.Date.class);
-//			ConvertUtils.register(new MainmessageConverter(), Mainmessage.class);
+			ConvertUtils.register(new CategoryConverter(), Category.class);
+			ConvertUtils.register(new AccountConverter(), Account.class);
 			
 			// Apache Commons ProjectのBeanUtilsを使用して
 			// Mapオブジェクトからエンティティ・オブジェクトへ値をセット
@@ -84,27 +84,50 @@ public class ControllerUtils {
 		}
 	}
 	
-//	private static class MainmessageConverter implements Converter {
-//
-//		@Override
-//		public <T> T convert(Class<T> mainmessageClass, Object value) {
-//			// TODO Auto-generated method stub
-//			
-//			T mainmessage = null;
-//			
-//			try {
-//				
-//				mainmessage = mainmessageClass.cast(new ) ;
-//				
-//			} catch {
-//				
-//			}
-//			
-//			return null;
-//		}
-//		
-//	}
-//	
+	private static class CategoryConverter implements Converter {
+
+		@Override
+		public <T> T convert(Class<T> categoryClass, Object value) {
+			// TODO Auto-generated method stub
+			
+			T category = null;
+			
+			try {
+				
+				category = categoryClass.cast(new CategoryDao().findById(Integer.parseInt((String) value)));
+				
+			} catch (NumberFormatException | DaoException e){
+				e.printStackTrace();
+			}
+			
+			return category;
+		}
+		
+	}
+	
+	private static class AccountConverter implements Converter {
+
+		@Override
+		public <T> T convert(Class<T> emailClass, Object value) {
+			// TODO Auto-generated method stub
+			
+			System.out.println("AccountConverter value is " + value);
+			
+			T account = null;
+			
+			try {
+				
+				account = emailClass.cast(new AccountDao().findById((String)value));
+				
+			} catch (NumberFormatException | DaoException e){
+				e.printStackTrace();
+			}
+			
+			return account;
+		}
+		
+	}
+	
 	
 	public static String getShortMessage(Throwable e) {
 

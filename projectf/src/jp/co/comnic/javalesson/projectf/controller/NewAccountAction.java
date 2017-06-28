@@ -28,8 +28,6 @@ public class NewAccountAction implements Action {
 
 		String forwardPath = "top.jsp"; // 例外発生時のフォワード先（元の登録画面）
 		
-		
-		
 		try {
 				Object entity = Class.forName(ControllerUtils.getFullyQualifiedClassName(str)).newInstance();
 				ControllerUtils.createEntity(request, entity);
