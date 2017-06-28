@@ -57,8 +57,7 @@
   			<div class="panel panel-danger">
   			<div class="panel-heading">
   				<h3 class="panel-title">${main.subject}</h3>
-  				
-  				<h4>${main.pdate}</h4>
+  				${main.pdate}
   				
   			</div>
   			<div class="panel-body">
@@ -66,7 +65,9 @@
   				<br>
   			</div>
   			
-  			<div class="panel-footer"><a href="main?id=${id}">このスレに行く。</a></div>
+  			<div class="panel-footer"><a href="main?id=${id}">このスレに行く。</a>
+  
+  			</div>
   		</div>
 
   		</c:forEach>

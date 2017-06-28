@@ -14,27 +14,57 @@
 
 
   </head>
-  <body>
+ <body>
   
   	<jsp:include page="page-menu.jsp">
 			<jsp:param name="page" value="menu" />
 		</jsp:include>
-
-
-  		<sql:query var="mainlist" dataSource="ds/projectf">
-  			SELECT * FROM MAINMESSAGE;
-  		</sql:query>
-  		
-  		<c:forEach var="main" items="${mainlist.rows}">
+		
+		
+		
+		<c:if test="${!empty param.id}">
+	
+			<sql:query var="rs" dataSource="ds/projectf">
+			SELECT * FROM MAINMESSAGE WHERE serialid = ${param.id};
+			</sql:query>
+		</c:if>
+		
+		<c:set var="Mmessage" value="${rs.rows[0]}" />
+  		<!-- 親スレッドの出力 -->
   			<div class="panel panel-danger">
   			<div class="panel-heading">
-  				<h3 class="panel-title">${main.subject}</h3>
+  				<h3 class="panel-title">${Mmessage["subject"]}</h3>
   				
-  				<h4>${main.pdate}</h4>
+  				<h4>${Mmessage["pdate"]}</h4>
   				
   			</div>
   			<div class="panel-body">
-  				${main.message}
+  				${Mmessage["message"]}
+  				<br>
+  			</div>
+  		</div>
+  		
+  		<sql:query var="sublist" dataSource="ds/projectf">
+  			SELECT * FROM SUBMESSAGE WHERE mainserialid = ${param.id};
+  		</sql:query>
+  		
+
+  		
+  		
+  		
+  		<!-- 子スレッドの出力 -->
+  		
+  		
+  		<c:forEach var="sub" items="${sublist.rows}">
+  			<div class="panel panel-danger">
+  			<div class="panel-heading">
+  				<h3 class="panel-title">${sub.subject}</h3>
+  				
+  				<h4>${sub.pdate}</h4>
+  				
+  			</div>
+  			<div class="panel-body">
+  				${sub.message}
   				<br>
   			</div>
   		</div>
