@@ -79,15 +79,10 @@
     			<div class="panel-body">
     			
               <form action="mainmessage.do" method="post">
-                
-                <div class="form-group">
+				
+				<div class="form-group">
                 <label for="exampleInputEmail1">スレッド番号</label>
                 <input type="number" name="serialid" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                  <label for="exampleInputEmail1">メッセージ</label>
-                  <textarea class="form-control" name="message" maxlength="500" rows="3"></textarea>
                 </div>
            
                 <div class="form-group">
@@ -99,6 +94,11 @@
                   <label for="exampleInputEmail1">タイトル</label>
                   <input type="text" name="subject" class="form-control">
                 </div>
+                               
+                <div class="form-group">
+                  <label for="exampleInputEmail1">メッセージ</label>
+                  <textarea class="form-control" name="message" maxlength="500" rows="3"></textarea>
+                </div>
                 
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
@@ -109,9 +109,7 @@
                   <label for="exampleInputEmail1">カテゴリ</label>
                   <input type="number" name="category" class="form-control">
                 </div>
-                
 
-                
                 <button type="submit" class="btn btn-default">投稿</button>
               </form>
             	</div>  			

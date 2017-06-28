@@ -17,7 +17,7 @@ public class Mainmessage implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int serialid;
 
 	private String message;
@@ -44,11 +44,11 @@ public class Mainmessage implements Serializable {
 	public Mainmessage() {
 	}
 	
-	public Mainmessage(int serialid, String message, Date pdate, String subject, Category category, Account account) {
+	public Mainmessage(int serialid, Date pdate, String subject, String message,Category category, Account account) {
 		this.serialid = serialid;
-		this.message = message;
 		this.pdate = pdate;
 		this.subject = subject;
+		this.message = message;
 		this.category = category;
 		this.account = account;
 				

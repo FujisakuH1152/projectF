@@ -18,6 +18,7 @@ import jp.co.comnic.javalesson.projectf.dao.CategoryDao;
 import jp.co.comnic.javalesson.projectf.dao.DaoException;
 import jp.co.comnic.javalesson.projectf.entity.Account;
 import jp.co.comnic.javalesson.projectf.entity.Category;
+import jp.co.comnic.javalesson.projectf.entity.Submessage;
 
 /**
  * <p> Entityの作成を行うクラス </p>
@@ -25,8 +26,6 @@ import jp.co.comnic.javalesson.projectf.entity.Category;
  * @author toda.shinnosuke
  *
  */
-
-
 
 /**
  * <p> Entityの作成を行うクラス </p>
@@ -73,6 +72,7 @@ public class ControllerUtils {
 			ConvertUtils.register(dateConverter, java.util.Date.class);
 			ConvertUtils.register(new CategoryConverter(), Category.class);
 			ConvertUtils.register(new AccountConverter(), Account.class);
+			ConvertUtils.register(new SubMessageConverter(), Submessage.class);
 			
 			// Apache Commons ProjectのBeanUtilsを使用して
 			// Mapオブジェクトからエンティティ・オブジェクトへ値をセット
@@ -128,6 +128,28 @@ public class ControllerUtils {
 		
 	}
 	
+	private static class SubMessageConverter implements Converter {
+
+		@Override
+		public <T> T convert(Class<T> submessageClass, Object value) {
+			// TODO Auto-generated method stub
+			
+			System.out.println("AccountConverter value is " + value);
+			
+			T submessage = null;
+			
+			try {
+				
+				submessage = submessageClass.cast(new AccountDao().findById((String)value));
+				
+			} catch (NumberFormatException | DaoException e){
+				e.printStackTrace();
+			}
+			
+			return submessage;
+		}
+		
+	}
 	
 	public static String getShortMessage(Throwable e) {
 
