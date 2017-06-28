@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 
 <!DOCTYPE html>
 <html>
@@ -19,35 +20,8 @@
 			<jsp:param name="page" value="menu" />
 		</jsp:include>
 
-  	<div class="row">
-  		<div class="panel panel-danger">
-  			<div class="panel-heading">
-  				<h3 class="panel-title">Panel title</h3>
-  				Auther : Arai<br>
-  				Date : 2017/07/01
-  			</div>
-  			<div class="panel-body">
-  				会いたくて 会いたくて 震える
-  				<br>
-  				君想うほど遠く感じて
-  				<br>
-  				もう一度聞かせて嘘でも
-  				<br>
-  				あの日のように“好きだよ”って…
-  				<br>
-  				今日は記念日 本当だったら
-  				<br>
-  				二人過ごしていたかな
-  				<br>
-  				きっと君は全部忘れて
-  				<br>
-  				あの子と笑いあってるの?
-  				<br>
-  			</div>
-  		</div>
 
-
-
+	<sql:query var=""></sql:query>
   		<div class="panel panel-danger">
   			<div class="panel-heading">
   				<h3 class="panel-title">逢いたくて震えてろ</h3>
@@ -73,7 +47,7 @@
   				<br>
   			</div>
   		</div>
-  	</div>
+
 
   </body>
 
