@@ -20,7 +20,8 @@ public class LogoutAction implements Action {
 		// TODO Auto-generated method stub
 		
 		request.getSession().invalidate(); //セッションの切断
-		response.sendRedirect(request.getRequestURI()); //ログアウト処理を実行したページへ遷移
+		
+		response.sendRedirect("/projectf/signInSub.jsp"); //ログアウト処理を実行したページへ遷移
 		
 		return null;
 	}
