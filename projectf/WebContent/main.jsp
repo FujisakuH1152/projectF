@@ -53,10 +53,13 @@
   		
   		
   		<!-- 子スレッドの出力 -->
-  		
+  		<div class="panel-group">
+    		<div class="panel panel-default">
+      		<div class="panel-heading">心優しい皆様の反応</div>
+      		<div class="panel-body">
   		
   		<c:forEach var="sub" items="${sublist.rows}">
-  			<div class="panel panel-danger">
+  			<div class="panel panel-info">
   			<div class="panel-heading">
   				<h3 class="panel-title">${sub.subject}</h3>
   				
@@ -70,6 +73,9 @@
   		</div>
 
   		</c:forEach>
+  			</div>
+   		 </div>
+  		</div>
   		
   		
   		<div class="container">
