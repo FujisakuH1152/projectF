@@ -80,8 +80,6 @@
                   <input type="number" name="category" class="form-control">
                 </div>
                 
-
-                
                 <button type="submit" class="btn btn-default">投稿</button>
               </form>
             	</div>  			

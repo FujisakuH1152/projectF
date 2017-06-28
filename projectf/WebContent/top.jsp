@@ -81,8 +81,7 @@
               <form action="mainmessage.do" method="post">
 				
 				<div class="form-group">
-                <label for="exampleInputEmail1">スレッド番号</label>
-                <input type="number" name="serialid" class="form-control">
+                <input type="hidden" name="serialid" value=NULL class="form-control">
                 </div>
            
                 <div class="form-group">

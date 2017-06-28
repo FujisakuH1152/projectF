@@ -23,7 +23,7 @@ public class NewMainMessageAction implements Action {
 		// TODO Auto-generated method stub
 		String str = "/Mainmessage/";
 
-		String forwardPath = "signInSub.jsp"; // 例外発生時のフォワード先（元の登録画面）
+		String forwardPath = "top.jsp"; // 例外発生時のフォワード先（元の登録画面）
 
 		try {
 			
@@ -35,7 +35,7 @@ public class NewMainMessageAction implements Action {
 			new BaseDao().insert(entity);
 
 			forwardPath = null;
-			response.sendRedirect(request.getRequestURI());
+			response.sendRedirect("main.jsp");
 
 		} catch (DaoException e) {
 			request.setAttribute("error", "ERROR : " + ControllerUtils.getShortMessage(e));
