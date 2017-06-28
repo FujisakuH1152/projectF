@@ -21,32 +21,27 @@
 		</jsp:include>
 
 
-	<sql:query var=""></sql:query>
-  		<div class="panel panel-danger">
+  		<sql:query var="mainlist" dataSource="ds/projectf">
+  			SELECT * FROM MAINMESSAGE;
+  		</sql:query>
+  		
+  		<c:forEach var="main" items="${mainlist.rows}">
+  			<div class="panel panel-danger">
   			<div class="panel-heading">
-  				<h3 class="panel-title">逢いたくて震えてろ</h3>
-  				Auther : Arai<br>
-  				Date : 2017/07/01
+  				<h3 class="panel-title">${main.subject}</h3>
+  				
+  				<h4>${main.pdate}</h4>
+  				
   			</div>
   			<div class="panel-body">
-  				会いたくて 会いたくて 震える
-  				<br>
-  				君想うほど遠く感じて
-  				<br>
-  				もう一度聞かせて嘘でも
-  				<br>
-  				あの日のように“好きだよ”って…
-  				<br>
-  				今日は記念日 本当だったら
-  				<br>
-  				二人過ごしていたかな
-  				<br>
-  				きっと君は全部忘れて
-  				<br>
-  				あの子と笑いあってるの?
+  				${main.message}
   				<br>
   			</div>
   		</div>
+
+  		</c:forEach>
+  		
+  		
 
 
   </body>

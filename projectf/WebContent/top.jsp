@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,25 +25,55 @@
 			<jsp:param name="page" value="menu" />
 		</jsp:include>
 		
+		
+	<div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Fujisaku Samurai Park!!!</h1>
+        <p>
+        	Fuck!!!<br>
+        	
+        	Fujisaku!!!<br>
+        	
+        	By<br>
+        	
+        	Youichi<br>
+        	
+        	Nikoue<br>
+        	
+        	ZuckerBerg!!<br>
+        	
+       
+			</p>
+      </div>
+    </div>
+		
 
-  <div class="container">
+    <sql:query var="mainlist" dataSource="ds/projectf">
+  			SELECT * FROM MAINMESSAGE;
+  		</sql:query>
+  		
+  		<c:forEach var="main" items="${mainlist.rows}">
+  			<div class="panel panel-danger">
+  			<div class="panel-heading">
+  				<h3 class="panel-title">${main.subject}</h3>
+  				
+  				<h4>${main.pdate}</h4>
+  				
+  			</div>
+  			<div class="panel-body">
+  				${main.message}
+  				<br>
+  			</div>
+  		</div>
 
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <h1>ProjectF</h1>
-      <p>ここらへんにタイトルでも画像でもなんでも入れてインパクト狙いでいくんごぉ.
-      </p>
-      <p>いやっほおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお</p>
-      <p>
-
-
-
-        <div class="container">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4>投稿</h4>
-            </div>
-            <div class="panel-body">
+  		</c:forEach>
+  		
+  		
+  		<div class="container">
+  			<h2>スレッド作成</h2>
+ 			 <div class="panel panel-default">
+    			<div class="panel-heading">以下に入力してください。</div>
+    			<div class="panel-body">
               <form >
                 <div class="form-group">
                   <label for="exampleInputEmail1">ユーザ名</label>
@@ -54,19 +89,13 @@
                 </div>
                 <button type="submit" class="btn btn-default">投稿</button>
               </form>
-            </div>
-          </div>
-
-      </div>
-      <indexbox>
-      <img src="sironeko.png" alt="" class="img-thumbnail" width="100" height="100"><br>
-        <boxauther>Auther : Arai</boxauther>
-        <p><boxtitle> Title : あああああああああしろねこぉおおおおおおおおおお<br>
-        </boxtitle></p>
-      </indexbox>
-
-
-    </div> <!-- /container -->
+            	</div>  			
+    		 </div>
+ 		</div>
+  		
+  		
+  		
+  
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
