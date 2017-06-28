@@ -52,7 +52,8 @@
   			SELECT * FROM MAINMESSAGE;
   		</sql:query>
   		
-  		<c:forEach var="main" items="${mainlist.rows}">
+  		<c:forEach var="main" items="${mainlist.rows}" varStatus="loop">
+  			<c:set var="id" value="${main.serialid}" />
   			<div class="panel panel-danger">
   			<div class="panel-heading">
   				<h3 class="panel-title">${main.subject}</h3>
@@ -64,6 +65,8 @@
   				${main.message}
   				<br>
   			</div>
+  			
+  			<div class="panel-footer"><a href="main?id=${id}">このスレに行く。</a></div>
   		</div>
 
   		</c:forEach>
