@@ -95,7 +95,7 @@
                 
                 <div class="form-group">
                 <label for="exampleInputEmail1">スレッドNo.${param.id}</label>
-                <input type="hidden" name="mainserialid" value=${param.id} class="form-control">
+                <input type="hidden" name="mainmessage" value=${param.id} class="form-control">
                 </div>
                 
                 <div class="form-group">

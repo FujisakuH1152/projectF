@@ -5,12 +5,6 @@ import javax.persistence.criteria.Root;
 
 import jp.co.comnic.javalesson.projectf.entity.Submessage;
 
-
-/**
- * <p>サブメッセージ･テーブルの操作を実装するDAOクラス</p>
- * @author fujisaku.hayato
- * @author ver1.0α
- */
 public class SubmessageDao extends BaseDao {
 
 	public SubmessageDao() throws DaoException {}
@@ -22,4 +16,7 @@ public class SubmessageDao extends BaseDao {
 		return super.findAll(query, root);
 	}
 	
+	public Submessage findById(Integer id) {
+		return super.findById(Submessage.class, id);
+	}
 }

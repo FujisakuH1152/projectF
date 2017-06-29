@@ -35,7 +35,7 @@ public class NewSubMessageAction implements Action {
 			new BaseDao().insert(entity);
 
 			forwardPath = null;
-			response.sendRedirect("top.jsp");
+			response.sendRedirect("main?id=" + request.getParameter("mainmessage"));
 
 		} catch (DaoException e) {
 			request.setAttribute("error", "ERROR : " + ControllerUtils.getShortMessage(e));

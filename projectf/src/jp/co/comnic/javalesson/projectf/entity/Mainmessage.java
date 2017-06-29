@@ -11,7 +11,7 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Mainmessage.findAll", query="SELECT m FROM Mainmessage m")
+//@NamedQuery(name="Mainmessage.findAll", query="SELECT m FROM Mainmessage m")
 
 public class Mainmessage implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -44,7 +44,7 @@ public class Mainmessage implements Serializable {
 	public Mainmessage() {
 	}
 	
-	public Mainmessage(int serialid, Date pdate, String subject, String message,Category category, Account account) {
+	public Mainmessage(int serialid, Date pdate, String subject, String message, Category category, Account account) {
 		this.serialid = serialid;
 		this.pdate = pdate;
 		this.subject = subject;

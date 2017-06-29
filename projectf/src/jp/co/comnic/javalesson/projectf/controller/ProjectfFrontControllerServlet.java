@@ -27,10 +27,6 @@ public class ProjectfFrontControllerServlet extends HttpServlet {
 		// Actionを実行して、転送先Viewのパスを取得
 		String forwardPath = action.execute(request, response);
 		
-		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-		
-		request.setAttribute("", sdf1);
-		
 		// Actionの実装先でsendRedirectが実行されている場合にはレスポンスがすでに返送されているためnullが返る
 		if (forwardPath != null) { // レスポンスがまだ返送されていなければ
 			// 適切なViewに転送

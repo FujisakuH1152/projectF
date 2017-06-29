@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
-import org.apache.commons.beanutils.Converter;//import org.apache.commons.beanutils.converters.DateConverter;
+import org.apache.commons.beanutils.Converter;
 
 import org.apache.commons.beanutils.converters.DateConverter;
 
@@ -69,21 +69,47 @@ public class ControllerUtils {
 			// 日付形式への対応
 			DateConverter dateConverter = new DateConverter();
 			dateConverter.setPattern("yyyy-MM-dd");
-						
+			
 			// コンバーターの登録
 			ConvertUtils.register(dateConverter, java.util.Date.class);
 			ConvertUtils.register(new CategoryConverter(), Category.class);
 			ConvertUtils.register(new AccountConverter(), Account.class);
 			ConvertUtils.register(new SubMessageConverter(), Submessage.class);
-//			ConvertUtils.register(new MainmessageConverter(), Mainmessage.class);
+			ConvertUtils.register(new MainmessageConverter(), Mainmessage.class);
+			
+
 			
 			// Apache Commons ProjectのBeanUtilsを使用して
 			// Mapオブジェクトからエンティティ・オブジェクトへ値をセット
 			BeanUtils.populate(entity, propertyMap);
 			
+			System.out.println("conveterrrrrrrrrrrrr : ");
+			
 		} catch (IllegalAccessException | InvocationTargetException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+	}
+	
+	private static class MainmessageConverter implements Converter {
+
+		@Override
+		public <T> T convert(Class<T> mainmessageClass, Object value) {
+			// TODO Auto-generated method stub
+			
+		
+			
+			T mainmessage = null;
+			
+			try {
+				
+				mainmessage = mainmessageClass.cast(new MainmessageDao().findById(Integer.parseInt((String) value)));
+				
+			} catch (NumberFormatException | DaoException e){
+				e.printStackTrace();
+			}
+			
+			return mainmessage;
 		}
 	}
 	
@@ -98,6 +124,7 @@ public class ControllerUtils {
 			try {
 				
 				category = categoryClass.cast(new CategoryDao().findById(Integer.parseInt((String) value)));
+				System.out.println("converter : " + value);
 				
 			} catch (NumberFormatException | DaoException e){
 				e.printStackTrace();
