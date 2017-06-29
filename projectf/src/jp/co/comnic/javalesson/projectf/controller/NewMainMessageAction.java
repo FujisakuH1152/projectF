@@ -33,7 +33,6 @@ public class NewMainMessageAction implements Action {
 			// リクエスト・パラメータの値を使用してエンティティ・オブジェクトのフィールド値を設定
 			ControllerUtils.createEntity(request, entity);
 			new BaseDao().insert(entity);
-
 			
 			forwardPath = null;
 			response.sendRedirect("top.jsp");

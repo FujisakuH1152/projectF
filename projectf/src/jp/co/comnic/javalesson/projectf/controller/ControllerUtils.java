@@ -75,7 +75,7 @@ public class ControllerUtils {
 			ConvertUtils.register(new CategoryConverter(), Category.class);
 			ConvertUtils.register(new AccountConverter(), Account.class);
 			ConvertUtils.register(new SubMessageConverter(), Submessage.class);
-			ConvertUtils.register(new MainmessageConverter(), Mainmessage.class);
+//			ConvertUtils.register(new MainmessageConverter(), Mainmessage.class);
 			
 			// Apache Commons ProjectのBeanUtilsを使用して
 			// Mapオブジェクトからエンティティ・オブジェクトへ値をセット
@@ -105,13 +105,12 @@ public class ControllerUtils {
 			
 			return category;
 		}
-		
 	}
 	
 	private static class AccountConverter implements Converter {
 
 		@Override
-		public <T> T convert(Class<T> emailClass, Object value) {
+		public <T> T convert(Class<T> accountClass, Object value) {
 			// TODO Auto-generated method stub
 			
 			System.out.println("AccountConverter value is " + value);
@@ -120,7 +119,7 @@ public class ControllerUtils {
 			
 			try {
 				
-				account = emailClass.cast(new AccountDao().findById((String)value));
+				account = accountClass.cast(new AccountDao().findById((String)value));
 				
 			} catch (NumberFormatException | DaoException e){
 				e.printStackTrace();

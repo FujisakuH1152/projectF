@@ -2,6 +2,8 @@ package jp.co.comnic.javalesson.projectf.controller;
 
 
 import java.io.IOException;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,10 +21,15 @@ public class ProjectfFrontControllerServlet extends HttpServlet {
        
 	protected void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
+
 		// リクエストURLから適切なActionオブジェクト(ビジネス・ロジックの実行をカプセル化するオブジェクト)を取得
 		Action action = ActionFactory.getAction(request.getServletPath());
 		// Actionを実行して、転送先Viewのパスを取得
 		String forwardPath = action.execute(request, response);
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+		
+		request.setAttribute("", sdf1);
 		
 		// Actionの実装先でsendRedirectが実行されている場合にはレスポンスがすでに返送されているためnullが返る
 		if (forwardPath != null) { // レスポンスがまだ返送されていなければ

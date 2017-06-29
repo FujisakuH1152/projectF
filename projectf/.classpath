@@ -20,5 +20,7 @@
 			<attribute name="owner.project.facets" value="jpt.jpa"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/client-combined-3.4.0-nodeps.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/selenium-server-standalone-3.4.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
