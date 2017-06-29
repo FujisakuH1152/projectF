@@ -1,6 +1,8 @@
 body {
   min-height: 2000px;
   padding-top: 70px;
+  
+  font-family: "Sawarabi Mincho"; 
 }
 
 form{
@@ -23,3 +25,10 @@ indexbox>boxauther{
 	color: #8B0000;
 }
 
+.wf-sawarabimincho { 
+	font-family: "Sawarabi Mincho"; 
+	}
+	
+*{
+	font-family: "Sawarabi Mincho"; 
+	}

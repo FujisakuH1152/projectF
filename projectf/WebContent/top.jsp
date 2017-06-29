@@ -15,6 +15,8 @@
 			
 		 <!-- Custom styles for this template -->
  		 <link href="./css/navbar-fixed-top.css" rel="stylesheet">
+ 		 
+ 		  <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
 
 </head>
 
@@ -30,18 +32,12 @@
       <div class="container">
         <h1>Welcome to Fujisaku Samurai Park!!!</h1>
         <p>
-        	Fuck!!!<br>
+        	ここはProjectFの作成した掲示板のページです。<br>
+        	<br>
         	
-        	Fujisaku!!!<br>
+        	スレッドの作成、スレッドへの返信、ログイン/ログアウトなどの機能を実装しています。<br>
         	
-        	By<br>
-        	
-        	Youichi<br>
-        	
-        	Nikoue<br>
-        	
-        	ZuckerBerg!!<br>
-        	
+        	Top画面にはすべてのスレッドを一覧表示しています。
        
 			</p>
       </div>

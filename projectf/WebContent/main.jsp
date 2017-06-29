@@ -28,7 +28,7 @@
 			SELECT * FROM MAINMESSAGE WHERE serialid = ${param.id};
 			</sql:query>
 		</c:if>
-		
+		${param.id}
 		<c:set var="Mmessage" value="${rs.rows[0]}" />
   		<!-- 親スレッドの出力 -->
   			<div class="panel panel-danger">

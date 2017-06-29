@@ -15,6 +15,8 @@
 			
 		 <!-- Custom styles for this template -->
  		 <link href="./css/navbar-fixed-top.css" rel="stylesheet">
+ 		 
+ 		 <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
 
 </head>
 
@@ -38,17 +40,10 @@
       <div class="container">
         <h1>Welcome to Fujisaku Samurai Park!!!</h1>
         <p>
-        	Fuck!!!<br>
+        	カテゴリ検索を行った結果を出力しています。<br>
+        	<br>
         	
-        	This Page is Category Result<br>
-        	
-        	By<br>
-        	
-        	Youichi<br>
-        	
-        	Nikoue<br>
-        	
-        	ZuckerBerg!!<br>
+        	該当スレッドがない場合は空欄になります。
         	
        
 			</p>
@@ -59,18 +54,20 @@
 
   		
   		<c:forEach var="Cmain" items="${rs.rows}" varStatus="loop">
-  			<c:set var="id" value="${main.serialid}" />
+  			<c:set var="id" value="${Cmain.serialid}" />
   			<div class="panel panel-danger">
   			<div class="panel-heading">
   				<h3 class="panel-title">${Cmain.subject}</h3>
   				${Cmain.pdate}
   				
+  				
   			</div>
   			<div class="panel-body">
   				${Cmain.message}
+  	
   				<br>
   			</div>
-  			
+
   			<div class="panel-footer"><a href="main?id=${id}">このスレに行く。</a>
   
   			</div>
