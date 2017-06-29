@@ -23,7 +23,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span> <span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Project F</a>
+			<a class="navbar-brand">Project F</a>
 		</div>
 
 		<div id="navbar" class="navbar-collapse collapse">
@@ -40,10 +40,7 @@
 						<li><a href="cate?cid=2">Gossip</a></li>
 						<li><a href="cate?cid=3">Game</a></li>
 						<li><a href="cate?cid=4">Complaints</a></li>
-						<li role="separator" class="divider"></li>
-						<li class="dropdown-header">Nav header</li>
-						<li><a href="#">Separated link</a></li>
-						<li><a href="#">One more separated link</a></li>
+						
 					</ul></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

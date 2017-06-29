@@ -5,7 +5,11 @@ import javax.persistence.criteria.Root;
 
 import jp.co.comnic.javalesson.projectf.entity.Category;
 
-
+/**
+ * <p>カテゴリー･テーブルの操作を実装するDAOクラス</p>
+ * @author fujisaku.hayato
+ * @author ver1.0α
+ */
 
 public class CategoryDao extends BaseDao {
 

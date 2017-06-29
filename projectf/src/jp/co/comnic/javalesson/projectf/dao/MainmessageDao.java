@@ -1,6 +1,10 @@
 package jp.co.comnic.javalesson.projectf.dao;
 
-
+/**
+ * <p>メインメッセージ･テーブルの操作を実装するDAOクラス</p>
+ * @author fujisaku.hayato
+ * @author ver1.0α
+ */
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
